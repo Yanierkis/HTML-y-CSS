@@ -1,0 +1,259 @@
+@font-face {
+    font-family: 'open_sans_condensedbold';
+    src: url('css_javier/open_sans/opensans-condbold-webfont.woff2') format('woff2'),
+         url('css_javier/open_sans/opensans-condbold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+:root{
+	--color-fondo:orange;
+	--borde: 2px solid red;
+}
+
+a{
+  border-radius: 5px;
+  padding: 10px 7px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #333;
+  margin: 5px;
+} 
+
+section.par{
+	background-color: #f0f5f5;
+}
+.ti{
+	color:black !important;
+	text-decoration: none;
+	     	border: none;
+	     	text-align: center;
+}
+
+
+.cont{
+	height: 90vh; /*Son responsive*/
+	width: 90vw;
+	border:0.5rem solid lightgrey;
+	margin: 1rem auto;
+	display:flex;/*Para adaptar los elementos dentro de el*/
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+
+}
+
+.caj{
+	padding: 1rem;
+	height: 100%;
+	width: 100%;
+	background-color: tomato;
+}
+
+.caj:nth-last-of-type(2){
+	background-color: dodgerblue;
+}
+
+/*media*/
+@media screen and (max-width: 650px)  {          /*Para impresoras es print*/
+
+.cont{
+	
+	flex-direction:column;
+}
+
+.caj:nth-last-of-type(2){
+	background-color: gold;
+}
+
+
+
+}
+
+
+html{
+	font-size:62.5%;
+}
+p{
+	font-family: 'Courier New',Courier,monospace;/*Si no tienes el primero pasa al siguiente*/
+	font-size: 1.5rem;
+	color:tomato;
+	line-height: 4rem; /*mayor separacion*/
+	font-weight: normal;/*equivale a 400*/
+	/*font-weight: bold;*/
+	text-decoration: underline;
+	text-transform: capitalize; /*te pone en mayuscula la primera letra*/
+	text-transform: uppercase;
+
+}
+
+#cambio{
+	font-family:"open_sans_condensedbold";
+	text-decoration: none;
+	text-transform: none; /*te pone en mayuscula la primera letra*/
+	text-transform: none;
+     color:blueviolet;
+}
+
+
+#camb{
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+	text-transform: none; /*te pone en mayuscula la primera letra*/
+	text-transform: none;
+     color:brown;
+}
+
+#icon{
+	font-size:3rem;
+	color:tomato;
+}
+
+#filtro{
+	/*filter:blur(20px);*/
+	/*filter:contrast(150%);*/
+	/*filter:grayscale(50%);*/
+	/*filter:invert(60%);*/
+	/*filter:sepia(60%);*/
+	filter:opacity(30%);
+}
+
+.form-group{
+	margin-bottom: 2rem;
+
+}
+
+.form-group > label{
+	display:block;
+	padding: 0.4rem;
+	font-size: 1.2rem;
+	
+}
+
+input[type="text"],input[type="email"]{
+	padding:0.8rem 1rem;
+	
+	outline:0;/*Se quita los estilos ndel navegador por defecto*/
+    border:1px solid tomato;
+}
+
+
+
+input[type="text"]:focus,input[type="email"]:focus{
+	border:1px solid dodgerblue;
+	
+}
+
+input[type="submit"],input[type="reset"]{
+	background-color: dodgerblue;
+	padding:1rem 1.8rem;
+	text-align: center;
+	text-transform: uppercase;
+	outline:0;
+	border-radius: 20px;
+	color:white;
+	border:0;
+	transition:background-color 0.25s;/*Para que no camn¡bie bruscamente de color*/
+	
+}
+
+input[type="submit"]:active,input[type="reset"]:active{
+	background-color: darkblue;
+	
+	
+}
+
+textarea{             /*Mirar*/
+	resize: none;
+}
+
+form{
+	width: 40%;
+	padding: 2rem;
+}
+
+label{
+	display:inline;
+}
+
+.cuadradito{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	perspective: 200px;
+}
+
+.caja80{
+	height: 300px;
+	width: 300px;
+	background-color: tomato;
+	/*transform:rotate(-20deg);*/
+	/*transform: scale(1.6);*/
+	transition:transform 0.5s;
+
+}
+
+.caja80:hover{
+/*transform:skew(15deg);*/
+transform: translate(10px ,20px);
+}
+
+.cuadradito2{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	perspective: 200px;/*Cuanto mas le ponga rotare mucho menos*/
+}
+
+
+.caja90{
+	height: 200px;
+	width: 200px;
+	background-color: tomato;
+transition: transform 1s;
+
+}
+
+.caja90:hover{
+	transform:rotateX(40deg);
+}
+
+
+.cuadradito3{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	
+}
+
+
+.caja100{
+
+	height: 200px;
+	width: 200px;
+	background-color: tomato;
+    transition: background-color 1.5s;
+    
+}
+
+.caja100:hover{
+	background-color: dodgerblue;
+}
+
+.caja101{
+	background-color: var(--color-fondo);
+	height: 150px;
+	width: 150px;
+	border:var(--borde);
+}
+
+.caja102{      /*Hay alguna forma de no repetir codigo?*/
+	background-color: var(--color-fondo);
+	height: 100px;
+	width: 100px;
+	
+}
